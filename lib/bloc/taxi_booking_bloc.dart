@@ -12,8 +12,7 @@ import 'package:taxi_app/models/taxi_driver.dart';
 import 'package:taxi_app/storage/taxi_booking_storage.dart';
 
 class TaxiBookingBloc extends Bloc<TaxiBookingEvent, TaxiBookingState> {
-  @override
-  TaxiBookingState get initialState => TaxiBookingNotInitializedState();
+  TaxiBookingBloc() : super(TaxiBookingNotInitializedState());
 
   @override
   Stream<TaxiBookingState> mapEventToState(TaxiBookingEvent event) async* {
